@@ -136,6 +136,11 @@ class As_Performance_Reports {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-as-performance-reports-admin.php';
 
         /**
+         * The class responsible for defining all formulas which are used to manupulate data
+         */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-excel-formulas.php';
+
+        /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
@@ -164,15 +169,12 @@ class As_Performance_Reports {
          */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class_admin_report_table.php';
 
-        /**
-         * The class responsible for defining all formulas which are used to manupulate data
-         */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-excel-formulas.php';
+        
 		
 		/**
 		 * The class responsible for defining all actions that are used to display last month report
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-last-month-report.php';
+		//require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-last-month-report.php';
 
 		/**
          * The class responsible for defining all actions that are used to display all records of perticualr call type
@@ -249,6 +251,8 @@ class As_Performance_Reports {
        	$this->loader->add_action( 'wp_ajax_nopriv_my_action', $plugin_public, 'my_action_callback' );
 
         $this->loader->add_filter('template_include', $plugin_public, 'override_templates_for_cpt_gallery');
+
+        $this->loader->add_shortcode( 'display_performance_report', $plugin_public, 'display_table_data');
     }
 
     /**

@@ -4,7 +4,7 @@ var dataTable = '';
             "processing": true,
             "serverSide": true,
             "ajax":{
-                url :"../wp-content/plugins/as-performance-reports/public/class-all-calls-grid-data.php", // json datasource
+                url :"../wp-content/plugins/as-performance-reports-2.2/public/class-all-calls-grid-data.php", // json datasource
                 type: "post",  // method  , by default get
                 error: function(){  // error handling
                     $(".all-single-type-calls-grid-error").html("");
@@ -37,7 +37,7 @@ var dataTable = '';
 	            "processing": true,
 	            "serverSide": true,
 	            "ajax":{
-	                url :"../wp-content/plugins/as-performance-reports/public/class-all-calls-grid-data.php", // json datasource
+	                url :"../wp-content/plugins/as-performance-reports-2.2/public/class-all-calls-grid-data.php", // json datasource
 	                type: "post",  // method  , by default get
 	                data : dataParam,
 	                error: function(){  // error handling

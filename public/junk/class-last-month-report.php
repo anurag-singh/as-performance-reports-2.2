@@ -155,30 +155,30 @@ class Last_Month_Report extends Report_Formula {
 				$success = $this->successPercentage($totalCallsgivenTillYet, $this->totalHits, $this->totalPendings);
     		}
 
-			$allCalltypes = 	array(
-							'action'				=> 	$action,
-							'entryPrice'			=> 	$entryPrice,
-							'exitPrice'				=> 	$exitPrice,
-    						'totalCalls' 			=>	$totalCallsgivenTillYet,
-    						'timePeriod' 			=>	$this->timePeriod,
-    						'noOfUnits' 			=>	$this->noOfUnits,
-    						'plPerUnit' 			=>	$this->plPerUnit,
-    						'plPerLac' 				=>	$this->plPerLac,
-    						'grossROI' 				=>	$this->grossROI . ' %',
-    						'finalResult' 			=>	$this->finalResult . ' %',
-    						'perCallInvestment' 	=>	$this->perCallInvestment,
-    						'perCallProfitLoss' 	=>	$this->perCallProfitLoss,
-    						'perCallROIonInvestment'=>	$this->perCallROIonInvestment,
-    						// 'totalInvestment' 		=>	$totalInvestment,
-    						// 'netProfitLoss' 		=>	$netProfitLoss,
-    						// 'roiOnInvestment'		=>	$roiOnInvestment,
-    						// 'totalAverageTimePeriod'=>	$totalAverageTimePeriod,
-    						// 'annualisedROI'			=> $annualisedROI,
-    						// 'success'				=> 	$success,
-    						// 'totalHits'				=>	$totalHits,
-    						// 'totalMisses'			=>	$totalMisses,
-    						// 'totalPendings'			=> 	$totalPendings
-    					);
+			$summarizedAllCalltypes = 	array(
+									'action'				=> 	$action,
+									'entryPrice'			=> 	$entryPrice,
+									'exitPrice'				=> 	$exitPrice,
+		    						'totalCalls' 			=>	$totalCallsgivenTillYet,
+		    						'timePeriod' 			=>	$this->timePeriod,
+		    						'noOfUnits' 			=>	$this->noOfUnits,
+		    						'plPerUnit' 			=>	$this->plPerUnit,
+		    						'plPerLac' 				=>	$this->plPerLac,
+		    						'grossROI' 				=>	$this->grossROI . ' %',
+		    						'finalResult' 			=>	$this->finalResult . ' %',
+		    						'perCallInvestment' 	=>	$this->perCallInvestment,
+		    						'perCallProfitLoss' 	=>	$this->perCallProfitLoss,
+		    						'perCallROIonInvestment'=>	$this->perCallROIonInvestment,
+		    						// 'totalInvestment' 		=>	$totalInvestment,
+		    						// 'netProfitLoss' 		=>	$netProfitLoss,
+		    						// 'roiOnInvestment'		=>	$roiOnInvestment,
+		    						// 'totalAverageTimePeriod'=>	$totalAverageTimePeriod,
+		    						// 'annualisedROI'			=> $annualisedROI,
+		    						// 'success'				=> 	$success,
+		    						// 'totalHits'				=>	$totalHits,
+		    						// 'totalMisses'			=>	$totalMisses,
+		    						// 'totalPendings'			=> 	$totalPendings
+		    					);
     	}
 
     	$singleCallTypes	= 	array(
@@ -198,7 +198,7 @@ class Last_Month_Report extends Report_Formula {
 
     	
     	$data = array(
-    			'allCalltypes' 		=> 	$allCalltypes, 
+    			'summarizedAllCalltypes' 		=> 	$summarizedAllCalltypes, 
     			'singleCallTypes' 	=> 	$singleCallTypes
     			);
 
